@@ -2,10 +2,10 @@
 
 DiamondTrap::DiamondTrap(std::string name) : ClapTrap(name + "_clap_name"),FragTrap(name),ScavTrap(name)
 {
-    this->name = name;
-    this->Hit_Points = FragTrap::Hit_Points;
-    this->Energy_Points = ScavTrap::Energy_Points;
-    this->Attack_damage = FragTrap::Attack_damage;
+    this->name = name;//this-> in this case is for seperat between the member of the class and the parametr that will be takeing by the constructor
+    Hit_Points = FragTrap::Hit_Points;
+    Energy_Points = ScavTrap::Energy_Points;
+    Attack_damage = FragTrap::Attack_damage;
     
     std::cout << "DiamondTrap parameterized constructor called" << std::endl;
     std::cout << "Hit Points: " << Hit_Points << std::endl;
@@ -15,7 +15,7 @@ DiamondTrap::DiamondTrap(std::string name) : ClapTrap(name + "_clap_name"),FragT
 
 void DiamondTrap::whoAmI()
 {
-    std::cout << "DiamondTrap as " << this->name << " ClapTrap name is " << ScavTrap::name << std::endl;
+    std::cout << "DiamondTrap as " << this->name << " ClapTrap name is " << ClapTrap::name << std::endl;
 }
 void DiamondTrap::attack(const std::string& target)
 {

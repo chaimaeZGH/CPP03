@@ -11,7 +11,7 @@ FragTrap::FragTrap()
 FragTrap::FragTrap(std::string name)
     : ClapTrap(name)
 {
-    Name = std::move(name);
+    Name = name;
     Hit_Points = 100;
     Energy_Points = 50;
     Attack_damage = 20;

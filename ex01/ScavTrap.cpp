@@ -11,7 +11,7 @@ ScavTrap::ScavTrap()
 ScavTrap::ScavTrap(std::string name)
     : ClapTrap(name)
 {
-    Name = std::move(name);
+    Name = name;
     Hit_Points = 100;
     Energy_Points = 50;
     Attack_damage = 20;
@@ -43,4 +43,15 @@ ScavTrap &ScavTrap::operator=(const ScavTrap& original)
 void ScavTrap::guardGate()
 {
     std::cout << "ScavTrap " << Name << " is now in Gate keeper mode" << std::endl;
+}
+
+void ClapTrap::attack(const std::string &target)
+{
+    if (Energy_Points == 0 || Hit_Points == 0)
+    {
+        std::cout << "ScavTrap " << Name << " can't attack: energy or hit points are not enough" << std::endl;
+        return;
+    }
+    Energy_Points--;
+    std::cout << "ScavTrap " << Name << " attacks " << target << ", causing  " << Attack_damage << " points of damage!" << std::endl;
 }
