@@ -56,9 +56,9 @@ DiamondTrap& DiamondTrap::operator=(const DiamondTrap& original)
     {
         ScavTrap::operator=(original);
         this->name = original.name;
+        std::cout << "DiamondTrap Assignment operator called" << std::endl;
     }
     else
         std::cout << "YOU assignment the same Object" << std::endl;
     return *this;
 }
-

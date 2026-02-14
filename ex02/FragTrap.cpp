@@ -20,7 +20,7 @@ FragTrap::FragTrap(std::string name)
 
 FragTrap::~FragTrap()
 {
-        std::cout << "FragTrap destracted called" << std::endl;
+        std::cout << "FragTrap destructed called" << std::endl;
 }
 
 FragTrap::FragTrap(const FragTrap& original) : ClapTrap(original)

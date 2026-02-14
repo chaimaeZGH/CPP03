@@ -19,7 +19,7 @@ ScavTrap::ScavTrap(std::string name)
 
 ScavTrap::~ScavTrap()
 {
-        std::cout << "ScavTrap destracted called" << std::endl;
+        std::cout << "ScavTrap destructed called" << std::endl;
 }
 
 ScavTrap::ScavTrap(const ScavTrap& original) : ClapTrap(original)

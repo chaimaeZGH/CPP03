@@ -20,7 +20,7 @@ ClapTrap::ClapTrap()
 }
 ClapTrap::~ClapTrap()
 {
-    std::cout << "ClapTrap destracted called" << std::endl;
+    std::cout << "ClapTrap destructed called" << std::endl;
 }
 
 
