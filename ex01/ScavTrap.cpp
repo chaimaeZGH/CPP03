@@ -45,7 +45,7 @@ void ScavTrap::guardGate()
     std::cout << "ScavTrap " << Name << " is now in Gate keeper mode" << std::endl;
 }
 
-void ClapTrap::attack(const std::string &target)
+void ScavTrap::attack(const std::string &target)
 {
     if (Energy_Points == 0 || Hit_Points == 0)
     {
